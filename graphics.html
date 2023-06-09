@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" type="png" href="images/icon/code art solution-02.png">
+  <title>Graphics Designing Course</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.4.0/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #F5F5F5;
+      color: #333333;
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .course-section {
+      background-color: #FFFFFF;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    h2 {
+      color: #333333;
+      font-size: 32px;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      text-align: justify;
+      color: #666666;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+      color: #666666;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    .enroll-button {
+      display: inline-block;
+      background-color: #FF5722;
+      color: #FFFFFF;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+
+    .enroll-button:hover {
+      background-color: #E64A19;
+    }
+
+    .language-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    /* Responsive Styles */
+
+    @media only screen and (max-width: 768px) {
+      .course-section {
+        padding: 20px;
+      }
+      
+      h2 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="course-section">
+      <h2 id="course-title">Graphics Designing Course</h2>
+      <p id="course-description">In this course, you will learn the fundamental principles and techniques of graphic design. Whether you're a beginner or looking to enhance your skills, this course is designed to provide you with a strong foundation in graphic design.</p>
+
+      <ul id="course-details">
+        <li>Duration: 8 weeks</li>
+        <li>Level: Beginner to Intermediate</li>
+        <li>Prerequisites: None</li>
+      </ul>
+
+      <h3>Course Topics:</h3>
+      <ul>
+        <li>Introduction to Graphic Design</li>
+        <li>Typography</li>
+        <li>Color Theory</li>
+        <li>Layout and Composition</li>
+        <li>Logo Design</li>
+        <li>Brand Identity</li>
+        <li>Image Editing</li>
+        <li>Creating Infographics</li>
+        <li>Print Design</li>
+        <li>Web Design Basics</li>
+      </ul>
+
+      <a href="https://wa.me/92485889082?text=urlencodedtext " class="enroll-button">Enroll Now</a>
+
+      <div class="language-switch">
+        <label for="language-toggle">English</label>
+        <input type="checkbox" id="language-toggle" data-toggle="switch" data-on-text="English" data-off-text="Urdu" data-on-color="primary" data-off-color="primary">
+        <label for="language-toggle">Urdu</label>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.4.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const languageToggle = document.getElementById('language-toggle');
+    const courseTitleElement = document.getElementById('course-title');
+    const courseDescriptionElement = document.getElementById('course-description');
+    const courseDetailsElement = document.getElementById('course-details');
+
+    languageToggle.addEventListener('change', toggleLanguage);
+
+    function toggleLanguage() {
+      if (languageToggle.checked) {
+        courseTitleElement.textContent = "ڈیزائننگ کورس";
+        courseDescriptionElement.textContent = "اس کورس میں آپ گرافک ڈیزائن کی بنیادی اصول اور تکنیکوں کو سیکھیں گے۔ چاہے آپ نوشتے ہوں یا اپنے ہنر کو بڑھانا چاہتے ہوں، یہ کورس آپ کو گرافک ڈیزائن میں مضبوط بنیاد فراہم کرنے کے لئے تشکیل دیا گیا ہے۔";
+        courseDetailsElement.innerHTML = "<li>مدت: 8 ہفتے</li><li>سطح: ابتدائی سے درمیانی</li><li>پہلے ضروریات: کوئی نہیں</li>";
+      } else {
+        courseTitleElement.textContent = "Graphics Designing Course";
+        courseDescriptionElement.textContent = "In this course, you will learn the fundamental principles and techniques of graphic design. Whether you're a beginner or looking to enhance your skills, this course is designed to provide you with a strong foundation in graphic design.";
+        courseDetailsElement.innerHTML = "<li>Duration: 8 weeks</li><li>Level: Beginner to Intermediate</li><li>Prerequisites: None</li>";
+      }
+    }
+  </script>
+</body>
+</html>

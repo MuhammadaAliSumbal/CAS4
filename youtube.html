@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" type="png" href="images/icon/code art solution-02.png">
+  <title>YouTube SEO Course</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .course-section {
+      background-color: #F5F5F5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    h2 {
+      color: #333333;
+      font-size: 32px;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      text-align: justify;
+      color: #666666;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+      color: #666666;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    .language-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .language-toggle label {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 0;
+    }
+
+    .language-toggle input[type="checkbox"] {
+      display: none;
+    }
+
+    .language-toggle .slider {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+      background-color: #ccc;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .language-toggle .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      border-radius: 50%;
+      transition: 0.4s;
+    }
+
+    .language-toggle input[type="checkbox"]:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    .language-toggle input[type="checkbox"]:checked + .slider:before {
+      transform: translateX(20px);
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const languageToggle = document.getElementById("language-toggle");
+      const courseTitle = document.getElementById("course-title");
+      const courseDescription = document.getElementById("course-description");
+      const courseDetails = document.getElementById("course-details");
+      const courseOutline = document.getElementById("course-outline");
+
+      languageToggle.addEventListener("change", function() {
+        if (languageToggle.checked) {
+          // Urdu text
+          courseTitle.textContent = "یوٹیوب ایسی او کورس";
+          courseDescription.textContent = "اس کورس میں، آپ کو یوٹیوب ویڈیوز کو بہتر دکھائی اور تلاش کے نتائج میں رینک کرنے کے استراتیجیوں اور تکنیکوں کو سیکھایا جائے گا۔";
+          courseDetails.innerHTML = `
+            <li>مدت: 6 ہفتے</li>
+            <li>سطح: ابتدائی سے متوسطہ</li>
+            <li>پیش نیاز: کوئی نہیں</li>
+          `;
+          courseOutline.textContent = "یوٹیوب ایسی او کورس آؤٹ لائن";
+        } else {
+          // English text
+          courseTitle.textContent = "YouTube SEO Course";
+          courseDescription.textContent = "In this course, you will learn the strategies and techniques to optimize YouTube videos for better visibility and ranking in search results.";
+          courseDetails.innerHTML = `
+            <li>Duration: 6 weeks</li>
+            <li>Level: Beginner to Intermediate</li>
+            <li>Prerequisites: None</li>
+          `;
+          courseOutline.textContent = "YouTube SEO Course Outline";
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="language-toggle">
+      <label for="language-toggle">
+        <input type="checkbox" id="language-toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <section class="course-section">
+      <h2 id="course-title">YouTube SEO Course</h2>
+      <p id="course-description">In this course, you will learn the strategies and techniques to optimize YouTube videos for better visibility and ranking in search results.</p>
+
+      <h3>Course Details:</h3>
+      <ul id="course-details">
+        <li>Duration: 6 weeks</li>
+        <li>Level: Beginner to Intermediate</li>
+        <li>Prerequisites: None</li>
+      </ul>
+
+      <h3 id="course-outline">YouTube SEO Course Outline</h3>
+      <ul>
+        <li>Introduction to YouTube SEO</li>
+        <li>Keyword Research for YouTube</li>
+        <li>Optimizing Video Titles, Descriptions, and Tags</li>
+        <li>Creating Engaging Thumbnails</li>
+        <li>Increasing Watch Time and Audience Retention</li>
+        <li>Promoting Videos and Building Subscribers</li>
+        <li>Analytics and Tracking Performance</li>
+        <li>Optimizing YouTube Channel for Search</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
